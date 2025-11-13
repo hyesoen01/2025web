@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h>Hello Day01 Page</h>
+    
+    <input id="input-name">
+    <button id="btn-test"> 테스트 </button>
+
+    <script>
+        console.log("hello")
+        console.log("...")//학번
+        console.log("...")//이름
+        
+        var btnTest = document.getElementById("btn-test")
+
+        btnTest.addEventListener('click',()=> {
+            //클릭하면 실행
+            console.log(" " + inputName.value + "님")
+        })
+    </script>
+</body>
+</html>
