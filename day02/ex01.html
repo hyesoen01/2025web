@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> 숫자 입력 </h1>
+    <div>
+        <input id="inp-num" type="number" value="0" />
+        <button id="btn-ok"> ok </button>
+    </div>
+    <p id="output"> 선택한 번호 : </p>
+
+    <script>
+
+        const inputNumber = document.getElementById('inp-num')
+        const btnOk = document.getElementById('btn-ok')
+        const output = document.getElementById('output')
+
+        btnOk.addEventListener('click',function() {
+            const selectedNumber = inputNumber.value
+            output.textContent = '선택한 번호 : ' + selectedNumber
+
+        })
+    </script>
+
+</body>
+</html>
