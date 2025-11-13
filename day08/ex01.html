@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        .box{
+            width: 128px;
+            height: 128px;
+            background-color: blue;
+            color: white;
+            border: 1px solid black;
+        }
+        .hor-center{
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .hor-right{
+            display: flex;
+            justify-content: right;
+            align-items: flex-start;
+        }
+        .vert-top{
+            display: flex;
+            justify-content: left;
+            align-items: flex-start;
+        }
+        .vert-top{
+            display: flex;
+            justify-content: left;
+            align-items: center;
+        }
+        .vert-bottom{
+            display: flex;
+            justify-content: left;
+            align-items: flex-end;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"> box </div>
+    <div class="box hor-center"> box </div>
+    <div class="box hor-right"> box </div>
+    <div class="box vert-top"> box </div>
+    <div class="box vert-top"> box </div>
+    <div class="box vert-bottom"> box </div>
+</body>
+</html>
