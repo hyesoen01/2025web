@@ -1,0 +1,83 @@
+body {
+    text-align: center;
+    background-color: rgb(0, 179, 255);
+    color: white;
+    /* 내용을 화면 정중앙에 놓기 위해 추가 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 화면 전체 높이 사용 */
+    margin: 0;
+}
+
+/* 시작 화면 스타일 */
+#start-screen h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+#start-screen button {
+    padding: 15px 30px;
+    font-size: 24px;
+    background-color: yellow; /* 노란색 버튼 */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#start-screen button:hover {
+    background-color: #e6b800; /* 마우스 올리면 약간 어둡게 */
+}
+
+/* 게임 판 스타일 */
+.game-board {
+    /* display: none; -> 어차피 처음엔 HTML에서 숨겨져 있고, JS가 켜줍니다. */
+    display: grid;  /* 격자 무늬(Grid) 모드 준비 */
+    grid-template-columns: repeat(4, 100px); /* 가로 4칸, 각 칸 80px */
+    gap: 15px;      /* 카드 사이 간격 */
+    justify-content: center;
+    margin-top: 20px; /* 위쪽 여백 */
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    
+    background-color: #2196F3;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    cursor: pointer;
+    color: transparent;
+    user-select: none;
+    transition: transform 0.3s;
+}
+
+
+.card.flipped {
+    background-color: white;
+    color: black;
+}
+/* 성공 화면 스타일 (시작 화면과 비슷하게) */
+#clear-screen h1 {
+    font-size: 50px;
+    color: #00ff00; /* 축하니까 밝은 초록색 */
+    margin-bottom: 20px;
+}
+
+#clear-screen button {
+    padding: 15px 30px;
+    font-size: 24px;
+    background-color: #3498db; /* 파란색 버튼 */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#clear-screen button:hover {
+    background-color: #2980b9;
+}

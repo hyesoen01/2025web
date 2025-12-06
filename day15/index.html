@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>쉬운 짝 맞추기</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    
+    <div id="start-screen">
+        <h1>카드 짝 맞추기 게임</h1>
+        <p>같은 그림의 카드를 찾아보세요!</p>
+        <button id="start-button">게임 시작</button>
+    </div>
+
+    <div class="game-board" style="display: none;">
+        <div class="card" data-id="1">🍎</div>
+        <div class="card" data-id="1">🍎</div>
+        <div class="card" data-id="2">🍌</div>
+        <div class="card" data-id="2">🍌</div>
+        <div class="card" data-id="3">🍇</div>
+        <div class="card" data-id="3">🍇</div>
+        <div class="card" data-id="4">🍉</div>
+        <div class="card" data-id="4">🍉</div>
+        <div class="card" data-id="5">🍒</div>
+        <div class="card" data-id="5">🍒</div>
+        <div class="card" data-id="6">⭐</div>
+        <div class="card" data-id="6">⭐</div>
+    </div>
+
+    <div id="clear-screen" style="display: none;">
+        <h1>축하합니다! 🎉</h1>
+        <p>모든 카드를 다 찾으셨네요!</p>
+        <button id="restart-button">다시 하기 (Restart)</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
