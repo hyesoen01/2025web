@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Counter Example</title>
+</head>
+<body>
+    <h1 id="counter-output">counter : 0</h1>
+    <button id="btn-inc"> Inc </button>
+
+    <script>
+        // 1. HTML 요소 가져오기
+        var counterOutput = document.getElementById("counter-output");
+        var btnInc = document.getElementById("btn-inc");
+        
+        // 2. 카운터 변수 초기화
+        var counter = 0; 
+
+        // 3. 버튼 클릭 이벤트 리스너 추가
+        btnInc.addEventListener('click', () => {
+            // 4. 카운터 값 증가
+            counter = counter + 1;
+            
+            // 5. 화면에 변경된 값 업데이트
+            counterOutput.innerText = "counter : " + counter;
+        });
+    </script>
+</body>
+</html>

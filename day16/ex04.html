@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사칙연산 계산기</title>
+</head>
+<body>
+    <div>
+        <input id="inp-num1" placeholder="숫자 1" /> 
+        ? 
+        <input id="inp-num2" placeholder="숫자 2" /> 
+        = 
+        <input id="inp-out" placeholder="결과" readonly />
+    </div>
+
+    <div style="margin-top: 10px;">
+        <button id="btn-plus"> 더하기(+) </button>
+        <button id="btn-minus"> 빼기(-) </button>
+        <button id="btn-mul"> 곱하기(*) </button>
+        <button id="btn-div"> 나누기(/) </button>
+    </div>
+
+    <script>
+        // 1. HTML 요소 가져오기
+        var inpNum1 = document.getElementById("inp-num1");
+        var inpNum2 = document.getElementById("inp-num2");
+        var inpout = document.getElementById("inp-out");
+        
+        var btnPlus = document.getElementById("btn-plus");
+        // [추가됨] 나머지 버튼 요소 가져오기
+        var btnMinus = document.getElementById("btn-minus");
+        var btnMul = document.getElementById("btn-mul");
+        var btnDiv = document.getElementById("btn-div");
+
+        // 2. 더하기 로직 (강의 자료 원본)
+        btnPlus.addEventListener('click', () => {
+            var num1 = parseInt(inpNum1.value);
+            var num2 = parseInt(inpNum2.value);
+            console.log(num1 + num2);
+            inpout.value = num1 + num2;
+        });
+
+        // 3. [추가됨] 빼기 로직
+        btnMinus.addEventListener('click', () => {
+            var num1 = parseInt(inpNum1.value);
+            var num2 = parseInt(inpNum2.value);
+            console.log(num1 - num2);
+            inpout.value = num1 - num2;
+        });
+
+        // 4. [추가됨] 곱하기 로직
+        btnMul.addEventListener('click', () => {
+            var num1 = parseInt(inpNum1.value);
+            var num2 = parseInt(inpNum2.value);
+            console.log(num1 * num2);
+            inpout.value = num1 * num2;
+        });
+
+        // 5. [추가됨] 나누기 로직
+        btnDiv.addEventListener('click', () => {
+            var num1 = parseInt(inpNum1.value);
+            var num2 = parseInt(inpNum2.value);
+            
+            // 0으로 나누는 경우에 대한 예외 처리는 선택사항입니다.
+            if(num2 === 0) {
+                inpout.value = "계산 불가";
+            } else {
+                console.log(num1 / num2);
+                inpout.value = num1 / num2;
+            }
+        });
+    </script>
+</body>
+</html>
