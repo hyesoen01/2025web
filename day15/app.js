@@ -1,12 +1,11 @@
-// --- [변경] 화면 요소들 가져오기 ---
 var startButton = document.getElementById('start-button');
 var restartButton = document.getElementById('restart-button'); // [NEW]
 var startScreen = document.getElementById('start-screen');
 var clearScreen = document.getElementById('clear-screen');     // [NEW]
 var gameBoard = document.querySelector('.game-board');
 
-// --- [변경] 변수 추가 ---
-var matchedPairs = 0; // 현재 몇 쌍을 맞췄는지 세는 변수
+
+var matchedPairs = 0; 
 
 // 1. 게임 시작 버튼
 startButton.addEventListener('click', function() {
@@ -14,13 +13,13 @@ startButton.addEventListener('click', function() {
     gameBoard.style.display = 'grid';
 });
 
-// [NEW] 2. 다시 하기 버튼 (누르면 페이지 새로고침)
+// [NEW] 2. 다시 하기 버튼
 restartButton.addEventListener('click', function() {
     location.reload(); 
 });
 
 
-// ... 기존 게임 로직 ...
+
 var cards = document.querySelectorAll('.card');
 var firstCard = null;
 var secondCard = null;
@@ -62,15 +61,15 @@ function disableCards() {
     firstCard.removeEventListener('click', onCardClick);
     secondCard.removeEventListener('click', onCardClick);
 
-    // [NEW] 짝을 맞췄으니 1점 추가
+   
     matchedPairs++; 
 
-    // [NEW] 6쌍을 모두 다 찾았는지 확인
+    
     if (matchedPairs == 6) {
-        // 0.5초 뒤에 축하 화면 표시
+        
         setTimeout(function() {
-            gameBoard.style.display = 'none';   // 게임판 숨기기
-            clearScreen.style.display = 'block'; // 축하 화면 보여주기
+            gameBoard.style.display = 'none';   
+            clearScreen.style.display = 'block'; 
         }, 500);
     }
 
